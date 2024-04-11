@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import {GlobalContext} from '../index'
+import GlobalContext from "./stateProvider";
 
 function Header() {
-  const { headerColor } = useContext(GlobalContext);
-  console.log(headerColor)
+  const { state } = useContext(GlobalContext);
+  
   return (
-    <div style={{ backgroundColor: headerColor }}>
+    <div style={{ backgroundColor: state.headerColor }}>
       <h1>Header</h1>
     </div>
   );
